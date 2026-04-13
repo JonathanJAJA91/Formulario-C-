@@ -1,0 +1,68 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AppForm.MainWindow"
+        Width="700" Height="500"
+        Title="Formulario de Usuario"
+        Background="#eef1f5">
+
+    <Grid ColumnDefinitions="1*,1*" Margin="20">
+
+        <!-- FORMULARIO -->
+        <Border Background="White"
+                CornerRadius="15"
+                Padding="20"
+                Margin="10"
+                BoxShadow="0 4 15 #00000022">
+
+            <StackPanel Spacing="10">
+
+                <TextBlock Text="Registro"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            HorizontalAlignment="Center"/>
+
+                <TextBox Name="txtNombre" Watermark="Nombre"/>
+                <TextBox Name="txtApellido" Watermark="Apellido"/>
+                <TextBox Name="txtEdad" Watermark="Edad"/>
+                <TextBox Name="txtCorreo" Watermark="Correo"/>
+                <TextBox Name="txtTelefono" Watermark="Teléfono"/>
+                <TextBox Name="txtCiudad" Watermark="Ciudad"/>
+                <TextBox Name="txtDireccion" Watermark="Dirección"/>
+
+                <Button Content="Enviar"
+                        Click="BtnEnviar_Click"
+                        Background="#4CAF50"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        Height="40"
+                        CornerRadius="8"
+                        Margin="0,10,0,0"/>
+
+            </StackPanel>
+        </Border>
+
+        <!-- RESULTADOS -->
+        <Border Grid.Column="1"
+                Background="White"
+                CornerRadius="15"
+                Padding="20"
+                Margin="10"
+                BoxShadow="0 4 15 #00000022">
+
+            <StackPanel Spacing="10">
+
+                <TextBlock Text="Datos ingresados"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            HorizontalAlignment="Center"/>
+
+                <TextBlock Name="txtResultado"
+                            TextWrapping="Wrap"/>
+
+            </StackPanel>
+
+        </Border>
+
+    </Grid>
+
+</Window>
